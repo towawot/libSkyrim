@@ -98,7 +98,7 @@ BSTEventSource<EventT>& operator-=(BSTEventSource<EventT>& source, F& f) {
 	BSTArray<SinkT*>* eventSinks = reinterpret_cast<BSTArray<SinkT*>*>((UInt32)&source + 8);
 	while (eventSinks->GetAt(i++, sink)) {
 		if (tmpSink == *sink) {
-			RemoveEventSink(sink);
+			source.RemoveEventSink(sink);
 			delete sink;
 			break;
 		}
