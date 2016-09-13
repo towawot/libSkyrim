@@ -242,7 +242,7 @@ public:
 
 			if (changes)
 			{
-				_MESSAGE("  * %d %d", changes->unk10, changes->unk11);
+				_MESSAGE("  * %d %d", changes->changed, changes->unk11);
 			}
 		}
 
